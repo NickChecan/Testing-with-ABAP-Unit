@@ -42,15 +42,15 @@ class zctl_test_class implementation.
 
   method amt_100_perc_90.
 
-    DATA(AMOUNT) = M_CUT->DETERMINE_DISCOUNTED_AMOUNT(
-        IM_PERC = '90.00'
-        IM_AMOUNT = '100.00'
+    data(amount) = m_cut->determine_discounted_amount(
+        im_perc = '90.00'
+        im_amount = '100.00'
     ).
 
-    CL_ABAP_UNIT_ASSERT=>assert_equals(
-        ACT = AMOUNT
-        EXP = '90.00'
-        MSG = 'Wrong amount'
+    cl_abap_unit_assert=>assert_equals(
+        act = amount
+        exp = '90.00'
+        msg = 'Wrong amount'
     ).
 
   endmethod.
